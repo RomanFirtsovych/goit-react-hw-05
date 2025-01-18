@@ -93,11 +93,9 @@
     margin-top: 10px;
 }
 
-/* Адаптивна верстка для екранів менше 600px */
 @media (max-width: 600px) {
     .details {
         flex-direction: column;
-        /* Встановлюємо вертикальне розташування */
         align-items: center;
     }
 
@@ -110,12 +108,10 @@
     .info {
         width: 100%;
         text-align: center;
-        /* Центруємо текст */
         margin-bottom: 20px;
     }
 
     .additionalInfo {
         text-align: center;
-        /* Центруємо посилання */
     }
 }
