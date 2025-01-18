@@ -1,0 +1,40 @@
+.cast {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.cast li {
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.cast img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cast p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cast li div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 340px;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+    border-radius: 10px;
+}
