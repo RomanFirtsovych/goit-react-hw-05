@@ -19,6 +19,8 @@
 
 .details {
     display: flex;
+    flex-wrap: wrap;
+    /* Додаємо, щоб дозволити перенесення */
     gap: 20px;
     margin-bottom: 20px;
 }
@@ -26,10 +28,32 @@
 .poster {
     width: 300px;
     border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .info {
     max-width: 600px;
+    flex-grow: 1;
+}
+
+/* Для тексту, який вже знаходився під фото */
+.additionalInfo {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.additionalInfo li {
+    margin-bottom: 10px;
+}
+
+.additionalInfo li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.additionalInfo li a:hover {
+    text-decoration: underline;
 }
 
 .genres {
@@ -69,20 +93,29 @@
     margin-top: 10px;
 }
 
-.additionalInfo {
-    list-style: none;
-    padding: 0;
-}
+/* Адаптивна верстка для екранів менше 600px */
+@media (max-width: 600px) {
+    .details {
+        flex-direction: column;
+        /* Встановлюємо вертикальне розташування */
+        align-items: center;
+    }
 
-.additionalInfo li {
-    margin-bottom: 10px;
-}
+    .poster {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
 
-.additionalInfo li a {
-    text-decoration: none;
-    color: #007bff;
-}
+    .info {
+        width: 100%;
+        text-align: center;
+        /* Центруємо текст */
+        margin-bottom: 20px;
+    }
 
-.additionalInfo li a:hover {
-    text-decoration: underline;
+    .additionalInfo {
+        text-align: center;
+        /* Центруємо посилання */
+    }
 }
